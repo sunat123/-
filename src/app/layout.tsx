@@ -15,18 +15,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        {/* AdSense через Next.js Script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          data-ad-client="ca-pub-2796903386018994"
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2796903386018994"
           crossOrigin="anonymous"
         />
       </head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2796903386018994"
-     crossorigin="anonymous"></script>
       <body className="antialiased">
         {children}
       </body>
     </html>
   );
-
 }
