@@ -9,13 +9,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
-        {/* AdSense через Next.js Script */}
         <Script
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
@@ -24,9 +23,26 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
+
       <body className="antialiased">
+
+        {/* AdSense block */}
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-2796903386018994"
+          data-ad-slot="8353330755"
+        />
+
+        <Script id="adsbygoogle-init" strategy="afterInteractive">
+          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+        </Script>
+
         {children}
       </body>
     </html>
   );
 }
+
+
