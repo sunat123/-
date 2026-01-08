@@ -21,9 +21,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2796903386018994"
+     crossorigin="anonymous"></script>
       <body className="antialiased">
         {children}
       </body>
     </html>
   );
+
 }
